@@ -75,6 +75,10 @@ binding_opts = [
                      'container.')),
     cfg.StrOpt('binding_executable_path',
                default=os.path.join(CONF.bindir, "binding/midonet_binding.sh"),
-               help='The path of the executable script for the bindig.')
+               help='The path of the executable script for the bindig.'),
+    cfg.StrOpt('unbinding_executable_path',
+               default=os.path.join(CONF.bindir,
+                                    "binding/midonet_unbinding.sh"),
+               help='The path of the executable script for the unbindig.')
 ]
 CONF.register_opts(binding_opts, 'binding')

@@ -237,6 +237,8 @@ def _create_subnets_and_or_port(interface, neutron_network_id, endpoint_id):
             'name': '-'.join([endpoint_id, 'port']),
             'admin_state_up': True,
             'network_id': neutron_network_id,
+            'device_owner': constants.DEVICE_OWNER,
+            'device_id': endpoint_id,
         }
         if interface_mac:
             port['mac_address'] = interface_mac

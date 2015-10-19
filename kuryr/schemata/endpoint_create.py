@@ -24,7 +24,7 @@ ENDPOINT_CREATE_SCHEMA = {
     u'required': [u'NetworkID', u'EndpointID', u'Options', u'Interface'],
     u'definitions': {u'commons': {}},
     u'$schema': u'http://json-schema.org/draft-04/hyper-schema',
-    u'type': u'object',
+    u'type': [u'object', u'null'],
     u'properties': {
         u'NetworkID': {
             u'description': u'Network ID',

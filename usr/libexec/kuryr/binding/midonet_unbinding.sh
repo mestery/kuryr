@@ -12,4 +12,4 @@
 # under the License.
 
 echo "Unbinding Neutron port $1..."
-mm-ctl --unbind-port $1 && echo "Done."
+sudo ovs-vsctl del-port br-int $2

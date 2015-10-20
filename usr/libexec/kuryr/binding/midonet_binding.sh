@@ -12,4 +12,5 @@
 # under the License.
 
 echo "Binding Neutron port $1 to the veth $2..."
-mm-ctl --bind-port $1 $2 && echo "Done."
+sudo ovs-vsctl add-port br-int $2
+sudo ovs-vsctl set interface $2 external_ids:iface-id=$1

@@ -50,4 +50,4 @@ SCHEMA = {
     "SUCCESS": {}
 }
 
-DEVICE_OWNER = 'kuryr:container'
+DEVICE_OWNER = 'compute:nova'

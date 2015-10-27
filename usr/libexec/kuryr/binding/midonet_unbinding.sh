@@ -11,5 +11,5 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-echo "Unbinding Neutron port $1..."
-sudo ovs-vsctl del-port br-int $2
+echo "Unbinding Neutron port $1...veth $2"
+sudo ovs-vsctl del-port br-int $1
